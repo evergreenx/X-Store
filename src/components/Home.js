@@ -25,7 +25,7 @@ export default function Home() {
                 <span className="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
                 </span>
                 <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
-                    Be on
+                    Shop on
                     <span className="text-5xl sm:text-7xl">
                         Time
                     </span>
@@ -42,8 +42,8 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
-                <img src="https://res.cloudinary.com/evergreenx/image/upload/v1621611157/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980-removebg-preview_iddwzw.png" className="max-w-xs md:max-w-sm m-auto"/>
+            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative animate-pulse">
+                <img src="https://res.cloudinary.com/evergreenx/image/upload/v1621611157/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980-removebg-preview_iddwzw.png" className=" m-auto"/>
             </div>
         </div>
     </div>

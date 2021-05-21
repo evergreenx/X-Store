@@ -14,7 +14,36 @@ export default function Home() {
     });
   }, []);
 
-  if (loading) return <span>Loading</span>;
+  if (loading) return(
+
+    <>
+  <div
+      class="fixed top-0 w-full bg-orange-100 border-b-2 border-gray-300 z-20"
+    >
+      <div class="relative">
+        <button
+          class="fixed inset-0 h-full w-full bg-gray-900 opacity-75 cursor-default z-20"
+        ></button>
+
+<h1>
+        Loading .....
+      </h1>
+      </div>
+    </div>
+{/* 
+    <div class="flex my-4 content-center xl:mx-auto mx-1">
+      <div class="hidden xl:block w-1/6 bg-red-400 h-12"></div>
+      <div class="w-full xl:w-3/6 bg-gray-500 h-12"></div>
+      <div class="hidden xl:block w-2/6 bg-blue-400 h-12">
+        <div
+          class="fixed max-w-sm rounded overflow-hidden border-2 border-gray-300 mt-20 z-10"
+        >
+          
+        </div>
+      </div>
+    </div> */}
+    </>
+  ) 
   return (
     <>
     <Header/>
