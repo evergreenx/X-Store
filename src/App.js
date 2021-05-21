@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home.js'
+import Header from './components/Header';
+
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
+      <Header/>
      <Home/>
+
     </div>
   );
 }
