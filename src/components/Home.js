@@ -1,71 +1,68 @@
 import React, { useEffect, useState } from "react";
-import axiosConfig from "../utilities/axiosconfig";
+
+import Header from "./Header";
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [loading, setloading] = useState(false)
-  useEffect(() => {
-
-    setloading(true)
-    axiosConfig.get("Products").then((res) => {
-      setProducts(res.data);
-      setloading(false)
-    });
-  }, []);
 
 
-  if(loading) return (
-    <span>Loading</span>
-  );
   return (
-    <div class="container mx-auto px-5">
-  
 
+    <>
+    <Header/>
 
+    <div className="mx-auto">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-   <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8 m-5">
-      {products.map((item) => (
-        <div class="flex flex-col items-center max-w-sm mb-5 mt-3 transition duration-500 ease-in-out hover:scale-110 transform cursor-pointer">
-          <div
-            class="w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md"
-            style={{
-              backgroundImage:
-              `url(${item.image})`,
-            }}
-          ></div>
-
-          <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
-            <h3 class="py-2 px-3 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white truncate">
-              {item.title}
-            </h3>
-
-            <div class="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
-              <span class="font-bold text-gray-800 dark:text-gray-200">
-                ${item.price}
-              </span>
-              <button class="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
-                Add to cart
-              </button>
-            </div>
-          </div>
+    <main classNameName="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
+    <header classNameName="h-24 sm:h-32 flex items-center z-30 w-full">
+        <div classNameName="container mx-auto px-6 flex items-center justify-between">
+           
+           
         </div>
-      ))}
-</div>
+    </header>
+    <div className="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+        <div className="container mx-auto px-6 flex relative py-16">
+            <div className="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20">
+                <span className="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
+                </span>
+                <h1 className="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
+                    Be on
+                    <span className="text-5xl sm:text-7xl">
+                        Time
+                    </span>
+                </h1>
+                <p className="text-sm sm:text-base text-gray-700 dark:text-white">
+                    Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
+                </p>
+                <div className="flex mt-8">
+                    <a href="#" className="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400">
+                        Get started
+                    </a>
+                    <a href="#" className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md">
+                        Read more
+                    </a>
+                </div>
+            </div>
+            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+                <img src="https://res.cloudinary.com/evergreenx/image/upload/v1621611157/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980-removebg-preview_iddwzw.png" className="max-w-xs md:max-w-sm m-auto"/>
+            </div>
+        </div>
     </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </>
+     
   );
 }
