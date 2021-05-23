@@ -1,5 +1,5 @@
 import React from 'react'
-import {Router,Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -14,6 +14,10 @@ export default function Header() {
          </Link>
          <Link to="/products" className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" >
              Products
+         </Link> 
+       
+         <Link to="/login" className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" >
+             Log in
          </Link> 
        
         

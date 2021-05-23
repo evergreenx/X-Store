@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axiosConfig from "../utilities/axiosconfig";
+import {Link} from 'react-router-dom'
 import Header from "./Header";
+import ReactImageAppear from 'react-image-appear';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -58,11 +60,13 @@ export default function Home() {
                 backgroundImage: `url(${item.image})`,
               }}
             ></div>
-
             <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
+<Link to={`/products/${item.id}`}>
+
               <h3 className="py-2 px-3 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white truncate">
                 {item.title}
               </h3>
+</Link>
 
               <div className="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
                 <span className="font-bold text-gray-800 dark:text-gray-200">

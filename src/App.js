@@ -1,15 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home.js";
 import Product from "./components/Product";
+import Login from "./components/Auth/Login";
+import ProductDetails from './components/ProductDetails'
+
 
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  Link,
 } from "react-router-dom";
 
 
@@ -21,6 +21,10 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/products" component={Product} />
+          <Route path="/products/:id" component={ProductDetails} />
+
+          <Route path="/login" component={Login} />
+
         </Switch>
       </Router>
     </div>
