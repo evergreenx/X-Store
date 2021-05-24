@@ -3,22 +3,18 @@ import {useParams} from 'react-router-dom'
 
 export default function ProductDetails() {
 
-
-    const {id} = useParams();
-    console.log('id is ',id);
+    const {account} = useParams();
+    // console.log('id is ',id);
 
     // const thisProduct = productsData.find(prod => prod.id === id)
     
     return (
-        <div>
+        <div className="text-white h-96">
             
-<h1>
 
-    Hello world 
-</h1>
             <h1>
 
-                {id}
+                {account}
             </h1>
         </div>
     )

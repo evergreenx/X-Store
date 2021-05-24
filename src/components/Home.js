@@ -12,9 +12,9 @@ export default function Home() {
 
     <div className="mx-auto">
 
-    <main classNameName="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
-    <header classNameName="h-24 sm:h-32 flex items-center z-30 w-full">
-        <div classNameName="container mx-auto px-6 flex items-center justify-between">
+    <main className="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
+    <header className="h-24 sm:h-32 flex items-center z-30 w-full">
+        <div className="container mx-auto px-6 flex items-center justify-between">
            
            
         </div>
@@ -42,7 +42,7 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative animate-pulse">
+            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative animate-bounce">
                 <img alt='' src="https://res.cloudinary.com/evergreenx/image/upload/v1621611157/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980-removebg-preview_iddwzw.png" className="m-auto"/>
             </div>
         </div>
