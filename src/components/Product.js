@@ -74,7 +74,7 @@ export default function Home() {
                     <span className="font-bold text-gray-800 dark:text-gray-200">
                       ${item.price}
                     </span>
-                    <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+                    <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-green-800 rounded hover:bg-green-700 dark:hover:bg-green-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
                       Add to cart
                     </button>
                   </div>

@@ -3,6 +3,9 @@ import Home from "./components/Home.js";
 import Product from "./components/Product";
 import Login from "./components/Auth/Login";
 import ProductDetails from './components/ProductDetails'
+import Cart from './components/Cart'
+
+
 
 
 
@@ -15,7 +18,7 @@ import {
 
 function App() {
   return (
-    <div className="App bg-black">
+    <div className="App">
 
       <Router>
         <Switch>
@@ -23,7 +26,11 @@ function App() {
           <Route exact path="/login" component={Login} />
 
           <Route path="/products" component={Product} />
+          <Route path="/cart" component={Cart}/>
+
           <Route path="/:id" component={ProductDetails}/>
+       
+
 
 
       
