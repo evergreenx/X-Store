@@ -3,8 +3,12 @@ import {Link} from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { useStateValue } from "./Context/StateProvider";
+
 
 export default function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
     return (
   
             
@@ -27,6 +31,11 @@ export default function Header() {
 
          <Link to="/cart" className="justify-self-end no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" >
          <FontAwesomeIcon icon={faCartArrowDown} />
+         <span className="text-xs ">
+
+         {basket?.length}
+
+         </span>
          </Link>
        
         

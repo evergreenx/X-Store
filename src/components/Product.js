@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axiosConfig from "../utilities/axiosconfig";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "./Header";
-
+import {useStateValue} from './Context/StateProvider'
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setloading] = useState(false);
-  const history = useHistory();
+  const [{ basket }, dispatch] = useStateValue();
+
 
   const fetchProduct = async () => {
     setloading(true);
@@ -15,6 +16,14 @@ export default function Home() {
     setProducts(response.data);
     setloading(false);
   };
+
+
+  const addToCart =() =>{
+  
+
+    alert('working here')
+
+  }
   useEffect(() => {
     fetchProduct();
   }, []);
@@ -74,7 +83,20 @@ export default function Home() {
                     <span className="font-bold text-gray-800 dark:text-gray-200">
                       ${item.price}
                     </span>
-                    <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-green-800 rounded hover:bg-green-700 dark:hover:bg-green-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+                    <button  onClick={()=>{
+  dispatch({
+    type: "ADD_TO_BASKET",
+    item: {
+      id: item.id,
+      title: item.title,
+      image: item.image,
+      price: item.price,
+    
+    },
+  });
+
+
+                    }}className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-green-800 rounded hover:bg-green-700 dark:hover:bg-green-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
                       Add to cart
                     </button>
                   </div>
