@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom';
 import Header from "./Header";
 
 export default function Home() {
@@ -34,12 +34,12 @@ export default function Home() {
                     Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
                 </p>
                 <div className="flex mt-8">
-                    <a href="/" className="uppercase py-2 px-4 rounded-lg bg-green-500 border-2 border-transparent text-white text-md mr-4 hover:bg-green-400">
+                    <Link to="/login" className="uppercase py-2 px-4 rounded-lg bg-green-500 border-2 border-transparent text-white text-md mr-4 hover:bg-green-400">
                         Get started
-                    </a>
-                    <a href="/" className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-green-500 text-green-500 dark:text-white hover:bg-green-500 hover:text-white text-md">
+                    </Link>
+                    <Link to="/products" className="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-green-500 text-green-500 dark:text-white hover:bg-green-500 hover:text-white text-md">
                         See Products
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative animate-bounce">

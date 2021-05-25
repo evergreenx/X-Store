@@ -12,7 +12,7 @@ export default function Header() {
     return (
   
             
-            <nav className="bg-white px-8 pt-2 shadow-md">
+            <nav className="bg-white px-8 pt-2 shadow-md sticky top-0 z-50">
      <div className="-mb-px flex justify-center">
   
 
