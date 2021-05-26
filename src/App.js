@@ -1,7 +1,9 @@
 import "./App.css";
-import Home from "./components/Home.js";
+import Home from "./components/Home";
 import Product from "./components/Product";
 import Login from "./components/Auth/Login";
+import SignUp from "./components/Auth/SignUp";
+
 import ProductDetails from './components/ProductDetails'
 import Cart from './components/Cart'
 
@@ -24,6 +26,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+
 
           <Route path="/products" component={Product} />
           <Route path="/cart" component={Cart}/>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axiosConfig from "../utilities/axiosconfig";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import NProgress from 'nprogress'
 import {useStateValue} from './Context/StateProvider'
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -10,20 +11,20 @@ export default function Home() {
 
 
   const fetchProduct = async () => {
+    NProgress.start();
+
     setloading(true);
+
+
 
     let response = await axiosConfig.get("Products?sort=desc");
     setProducts(response.data);
+
+    NProgress.done();
     setloading(false);
   };
 
 
-  const addToCart =() =>{
-  
-
-    alert('working here')
-
-  }
   useEffect(() => {
     fetchProduct();
   }, []);

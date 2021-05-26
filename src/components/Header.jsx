@@ -7,7 +7,7 @@ import { useStateValue } from "./Context/StateProvider";
 
 
 export default function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }, ] = useStateValue();
 
     return (
   
@@ -25,6 +25,10 @@ export default function Header() {
        
          <Link to="/login" className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" >
              Log in
+         </Link> 
+
+         <Link to="/signup" className="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" >
+             Sign up
          </Link> 
 
       

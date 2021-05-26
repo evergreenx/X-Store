@@ -42,7 +42,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
-            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative animate-bounce">
+            <div className="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
                 <img alt='' src="https://res.cloudinary.com/evergreenx/image/upload/v1621611157/store-with-credit-card-gift-boxes-buyers-illustration_1262-18980-removebg-preview_iddwzw.png" className="m-auto"/>
             </div>
         </div>
