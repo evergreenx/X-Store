@@ -1,4 +1,4 @@
-import "./App.css";
+
 import Home from "./components/Home";
 import Product from "./components/Product";
 import Login from "./components/Auth/Login";
@@ -20,9 +20,11 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-auto scrollbar-thumb-gray-900 scrollbar-track-gray-100 scrollbar">
+<div class=" ">
+    {/* <div class="h-64"></div> */}
 
-      <Router>
+    <Router>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route exact path="/login" component={Login} />
@@ -42,6 +44,8 @@ function App() {
         </Switch>
       </Router>
     </div>
+</div>
+   
   );
 }
 
