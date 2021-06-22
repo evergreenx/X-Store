@@ -5,9 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import reducer , {initialState} from "./components/Context/Reducer"
 import {StateProvider} from './components/Context/StateProvider'
+
+
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer} >
+ 
+
     <App />
 
     </StateProvider>

@@ -11,6 +11,7 @@ import Cart from './components/Cart'
 
 
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +21,9 @@ import {
 
 function App() {
   return (
-    <div className="App h-auto scrollbar-thumb-gray-900 scrollbar-track-gray-100 scrollbar">
+  <div className="App ">
+
+
 <div class=" ">
     {/* <div class="h-64"></div> */}
 
@@ -45,6 +48,8 @@ function App() {
       </Router>
     </div>
 </div>
+   
+  
    
   );
 }
